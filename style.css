@@ -1,0 +1,113 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body * {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body .hide {
+  display: none;
+}
+
+body .show {
+  display: block;
+}
+
+body .grey {
+  display: none;
+}
+
+body .navbar .mobile {
+  display: none;
+}
+
+body .navbar .desktop {
+  background-color: #8f3434;
+  height: 4rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 6fr 2fr 2fr;
+      grid-template-columns: 6fr 2fr 2fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .navbar .desktop .menu {
+  display: none;
+  color: white;
+}
+
+body .navbar .desktop a {
+  text-decoration: none;
+  color: white;
+}
+
+@media all and (max-width: 720px) {
+  body .grey {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background-color: lightgray;
+    z-index: 2;
+    position: fixed;
+    top: 4rem;
+  }
+  body .grey .popUp {
+    width: 50vw;
+    height: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    justify-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: white;
+    position: fixed;
+  }
+  body .grey .popUp .logo {
+    width: 25%;
+    height: 25%;
+  }
+  body .grey .popUp a {
+    color: black;
+    line-height: 3rem;
+    text-decoration: none;
+  }
+  body .navbar {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  body .navbar .desktop {
+    display: none;
+  }
+  body .navbar .mobile {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    background-color: #8f3434;
+    color: white;
+    width: calc(100vw - 1rem);
+    height: 4rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0.25rem 0.5rem;
+  }
+  body .navbar .mobile .logo {
+    justify-self: flex-end;
+  }
+}
+/*# sourceMappingURL=style.css.map */
