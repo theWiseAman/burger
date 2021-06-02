@@ -1,12 +1,19 @@
-var status = false;
-function toggle() {
-    let popup = document.getElementsByClassName('grey');
+function show() {
+    let grey = document.getElementById('grey');
+    grey.addEventListener("click", hide);
+    let popup = document.getElementById('popUp')
+    popup.removeEventListener("click", hide);
+
+    grey.classList.add("show");
+    grey.classList.remove("hide");
+}
+function hide() {
+    let grey = document.getElementById('grey');
     
-    popup.classList('show');
+    grey.classList.add("hide");
+    grey.classList.remove("show");
 }
 window.onload = function() {
-    var button = document.getElementsByTagName('button');
-    button.addEventListener('click', toggle);
-    var popup = document.getElementsByClassName('grey');
-    popup.addEventListener('click', toggle);
+    var button = document.getElementById('button');
+    button.addEventListener("click", show);
 }

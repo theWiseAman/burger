@@ -9,16 +9,44 @@ body * {
           box-sizing: border-box;
 }
 
-body .hide {
-  display: none;
-}
-
-body .show {
-  display: block;
-}
-
 body .grey {
-  display: none;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  background-color: lightgray;
+  z-index: 2;
+  position: fixed;
+  top: 4rem;
+}
+
+body .grey .popUp {
+  width: 50vw;
+  height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  position: fixed;
+  z-index: 3;
+}
+
+body .grey .popUp .logo {
+  width: 25%;
+  height: 25%;
+}
+
+body .grey .popUp a {
+  color: black;
+  line-height: 3rem;
+  text-decoration: none;
 }
 
 body .navbar .mobile {
@@ -47,42 +75,15 @@ body .navbar .desktop a {
   color: white;
 }
 
+body .hide {
+  display: none;
+}
+
+body .show {
+  display: block;
+}
+
 @media all and (max-width: 720px) {
-  body .grey {
-    display: block;
-    width: 100vw;
-    height: 100vh;
-    background-color: lightgray;
-    z-index: 2;
-    position: fixed;
-    top: 4rem;
-  }
-  body .grey .popUp {
-    width: 50vw;
-    height: 80%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    justify-items: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    background-color: white;
-    position: fixed;
-  }
-  body .grey .popUp .logo {
-    width: 25%;
-    height: 25%;
-  }
-  body .grey .popUp a {
-    color: black;
-    line-height: 3rem;
-    text-decoration: none;
-  }
   body .navbar {
     display: -ms-grid;
     display: grid;
@@ -91,6 +92,9 @@ body .navbar .desktop a {
   }
   body .navbar .desktop {
     display: none;
+  }
+  body .navbar button {
+    cursor: pointer;
   }
   body .navbar .mobile {
     display: -ms-grid;

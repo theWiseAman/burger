@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Burger Order</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="index.js"></script>
+    <script src="./index.js"></script>
 </head>
 <body>
-    <div class="grey">
-        <div class="popUp">
+    <div class="grey hide" id="grey">
+        <div class="popUp" id="popUp">
             <span class="logo">
                 <img src="#" alt="Burger's Company Logo">
             </span>
@@ -29,7 +29,7 @@
         </div>
         <div class="mobile">
             <span class="menu">
-                <button onclick="toggle()">
+                <button id="button">
                     <i class="fa fa-bars"></i>
                 </button>
             </span>
